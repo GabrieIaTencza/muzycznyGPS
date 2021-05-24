@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+    <app-theme-switcher style="position: absolute; right: 0"></app-theme-switcher>
+    <button mat-icon-button [matMenuTriggerFor]="menu" >
+      <mat-icon style="font-size: 40px;">menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item  [routerLink]="''">
+        <mat-icon>home</mat-icon>
+        <span>Strona główna</span>
+      </button>
+      <button mat-menu-item [routerLink]="'/memory-game'">
+        <mat-icon>memory</mat-icon>
+        <span>Gra w zapamiętywanie</span>
+      </button>
+      <button mat-menu-item [routerLink]="'/game'">
+        <mat-icon>extension</mat-icon>
+        <span>Gra w odgadywanie</span>
+      </button>
+      <button mat-menu-item [routerLink]="'/parent-page'">
+        <mat-icon>escalator_warning</mat-icon>
+        <span>Panel rodzica</span>
+      </button>
+      <button mat-menu-item [routerLink]="'/about-me'">
+        <mat-icon>send</mat-icon>
+        <span>Twórcy</span>
+      </button>
+    </mat-menu>
+  
+    <span style="margin-left: 20px">Muzyczny GPS</span>
+  </mat-toolbar>

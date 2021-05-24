@@ -1,0 +1,12 @@
+<div class="card mb-4">
+  <div class="back d-flex justify-content-center">
+  </div>
+  <img *ngIf="!this.card.revealed" class="back"
+    src="assets/nutka.png"
+    (click)="cardClick()"
+  /> 
+  <img *ngIf="this.card.revealed" class="front transparent"
+    src="assets/sound.png"
+    (click)="cardClick()"
+  /> 
+</div>

@@ -1,0 +1,47 @@
+.card {
+    position: relative;
+    height: 150px;
+    width: 160px;  
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 5px;
+  }
+  
+  .front {
+    background-color: blue;
+    border-radius: 10px;
+    position:absolute;
+    border: 1px solid #00548b;
+    height: 150px;
+    width: 160px;  
+    left: 0;
+    -webkit-transition: opacity 4s ease-in-out;
+    -moz-transition: opacity 4s ease-in-out;
+    -o-transition: opacity 4s ease-in-out;
+    transition: opacity 4s ease-in-out;
+    cursor: default;
+    margin: 5px;
+  }
+  
+  
+  
+  .back {  
+    margin: 5px;
+    border: 1px solid #00548b;
+    background-color: yellow;
+    border-radius: 10px;
+    height: 150px;
+    width: 160px;     
+    position:absolute;
+    left: 0;
+    -webkit-transition: opacity 4s ease-in-out;
+    -moz-transition: opacity 4s ease-in-out;
+    -o-transition: opacity 4s ease-in-out;
+    transition: opacity 4s ease-in-out;
+  }
+
+  img {
+    width: 50%;
+    height: 50%;
+  }
