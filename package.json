@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "ng build --prod --base-href git@github.com:GabrieIaTencza/muzycznyGPS.git && angular-cli-ghpages --branch develop"
   },
   "private": true,
   "dependencies": {
