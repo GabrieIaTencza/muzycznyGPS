@@ -1,12 +1,21 @@
 <app-navigation-bar></app-navigation-bar>
 <div *ngIf="!showCorrectMessage && !showWrongMessage && !endGame" style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
     
-    <ng-container *ngIf="!game2Start">
+    <ng-container *ngIf="!game2Start && !xd">
     <div style="font-size: 24px; margin-bottom: 20px;"> Kliknij start </div>
-    <button mat-raised-button color="primary" (click)="play()"> START </button>
+    <button mat-raised-button color="primary" (click)="st()"> START </button>
 </ng-container>
 
-  <div *ngIf="game2Start" >
+<ng-container *ngIf="game2Start && xd">
+  <div style="font-size: 24px; margin-bottom: 20px;"> Wybierz poziom </div>
+  <div style="display: flex; flex-direction: row;">
+    <button mat-raised-button color="primary" (click)="level('easy')" > Poziom łatwy</button>
+    <button mat-raised-button color="primary" (click)="level('medium')" style="margin-left: 5px; margin-right: 5px;">Poziom średni</button>
+    <button mat-raised-button color="primary"(click)="level('hard')" >Poziom trudny</button>
+    </div>
+</ng-container>
+
+  <div *ngIf="game2Start && !xd">
     <div style="font-size: 30px; margin-left: auto; margin-right: auto; margin-bottom: 30px; width: 100%;"> Odgadnij kategorię utworu</div>
    
     <button mat-raised-button color="primary"  [disabled]="sound" class="button3" (click)="answer('pory_roku')"> Pora roku </button>
@@ -31,4 +40,4 @@
 
   <div *ngIf="endGame" style="color: green;width: 100%; height: 100%; flex-direction: column; display: flex; align-items: center; justify-content: center; font-size: 30px;"> Wygrana
     <div style="font-size: 24px; margin-bottom: 20px; color: white; margin-top: 5px;"> Aby zagrać ponownie kliknij start</div>
-    <button mat-raised-button color="primary" (click)="play()"> START </button> </div>
+    <button mat-raised-button color="primary" (click)="st()"> START </button> </div>

@@ -10,6 +10,7 @@ export class SecondGameComponent implements OnInit {
   sound = false;
   showCorrectMessage = false;
   showWrongMessage = false;
+  chLevel!: number;
   game2Start = false;
   mainItem!: any;
   correctAnswer = false;
@@ -74,10 +75,6 @@ export class SecondGameComponent implements OnInit {
       url: 'assets/music2/polska/podhale.mp3',
       kategoria: 'polska',
     },
-    {
-      url: 'assets/music2/polska/mazowsze.mp3',
-      kategoria: 'polska',
-    },
   ];
 
   pory_roku = [
@@ -91,10 +88,6 @@ export class SecondGameComponent implements OnInit {
     },
     {
       url: 'assets/music2/pory_roku/jesien.mp3',
-      kategoria: 'pory_roku',
-    },
-    {
-      url: 'assets/music2/pory_roku/zima.mp3',
       kategoria: 'pory_roku',
     },
   ];
@@ -112,10 +105,6 @@ export class SecondGameComponent implements OnInit {
       url: 'assets/music2/pory_dnia/taniec_air.mp3',
       kategoria: 'pory_dnia',
     },
-    {
-      url: 'assets/music2/pory_dnia/taniec_arabski.mp3',
-      kategoria: 'pory_dnia',
-    },
   ];
 
   taniec = [
@@ -131,11 +120,9 @@ export class SecondGameComponent implements OnInit {
       url: 'assets/music2/taniec/polka.mp3',
       kategoria: 'taniec',
     },
-    {
-      url: 'assets/music2/taniec/polonez.mp3',
-      kategoria: 'taniec',
-    },
   ];
+
+  xd = false;
 
   constructor() { }
 
@@ -148,8 +135,11 @@ export class SecondGameComponent implements OnInit {
   }
 
   play() {
+    this.xd = false;
+    this.game2Start = true;
     this.sound = true;
-    const index = Math.floor(Math.random() * (5))
+    const index = Math.floor(Math.random() * 3);
+    console.log(index);
     const categoryArray = [
       this.bajki,
       this.miejsca,
@@ -199,7 +189,7 @@ export class SecondGameComponent implements OnInit {
       this.showCorrectMessage = true;
       setTimeout(() => {
         this.showCorrectMessage = false;
-        if(this.answerCounter > 3) {
+        if(this.answerCounter > this.chLevel) {
           this.endGame = true;
   
           return;
@@ -213,6 +203,28 @@ export class SecondGameComponent implements OnInit {
         this.showWrongMessage = false;
       }, 3000);
     }
+  }
+
+  level(poziom: string) {
+    if(poziom === 'easy') {
+      this.chLevel = 1;
+    }
+
+    if(poziom === 'medium') {
+      this.chLevel = 5;
+    }
+
+    if(poziom === 'hard') {
+      this.chLevel = 7;
+    }
+
+    this.play();
+  }
+
+  st() {
+    this.xd = true;
+    this.game2Start = true;
+    this.endGame = false;
   }
 
 }
