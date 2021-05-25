@@ -42,6 +42,11 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {}
 
+  test() {
+    console.log('test');
+    
+  }
+
   initGame(level: string) {
     this.clicks = 0;
     this.waiting = false;

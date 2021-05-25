@@ -21,6 +21,7 @@ import { NavigationBarComponent } from './components/navigation-bar/navigation-b
 import { ParentPanelComponent } from './components/parent-panel/parent-panel.component';
 import { CreatorComponent } from './components/creator/creator.component';
 import { SecondGameComponent } from './components/second-game/second-game.component';
+import { CiekawostkiComponent } from './components/ciekawostki/ciekawostki.component';
 
 const routes: Routes = [
   { path: 'memory-game', component: AppComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'parent-page', component: ParentPanelComponent},
   { path: 'about-me', component: CreatorComponent},
   { path: 'game', component: SecondGameComponent},
+  { path: 'curiosities', component: CiekawostkiComponent}
 ];
 
 @NgModule({
@@ -39,7 +41,8 @@ const routes: Routes = [
     NavigationBarComponent,
     ParentPanelComponent,
     CreatorComponent,
-    SecondGameComponent
+    SecondGameComponent,
+    CiekawostkiComponent
   ],
   imports: [
     RouterModule.forRoot(routes),

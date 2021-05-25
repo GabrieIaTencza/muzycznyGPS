@@ -23,20 +23,20 @@ export class CardService {
     }
    
     return of([
-      '../../../assets/music/burza.mp3',
-      '../../../assets/music/gory.mp3',
-      '../../../assets/music/grudzien.mp3',
-      '../../../assets/music/kaczka.mp3',
-      '../../../assets/music/kot.mp3',
-      '../../../assets/music/las.mp3',
-      '../../../assets/music/listopad.mp3',
-      '../../../assets/music/morze.mp3',
-      '../../../assets/music/mysz.mp3',
-      '../../../assets/music/pies.mp3',
-      '../../../assets/music/samochod.mp3',
-      '../../../assets/music/statek.mp3',
-      '../../../assets/music/styczen.mp3',
-      '../../../assets/music/wies.mp3',
+      'assets/music/burza.mp3',
+      'assets/music/gory.mp3',
+      'assets/music/grudzien.mp3',
+      'assets/music/kaczka.mp3',
+      'assets/music/kot.mp3',
+      'assets/music/las.mp3',
+      'assets/music/listopad.mp3',
+      'assets/music/morze.mp3',
+      'assets/music/mysz.mp3',
+      'assets/music/pies.mp3',
+      'assets/music/samochod.mp3',
+      'assets/music/statek.mp3',
+      'assets/music/styczen.mp3',
+      'assets/music/wies.mp3',
     ].splice(0, NUMBER_OF_IMAGES));
   }
 }

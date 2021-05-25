@@ -18,86 +18,125 @@ export class SecondGameComponent implements OnInit {
 
   bajki = [
     {
-      url: '../../../../assets/music2/bajki/Elsa.mp3',
+      url: 'assets/music2/bajki/Elsa.mp3',
       kategoria: 'bajki'
     },
     {
-      url: '../../../../assets/music2/bajki/masza.mp3',
+      url: 'assets/music2/bajki/masza.mp3',
       kategoria: 'bajki'
     },
     {
-      url: '../../../../assets/music2/bajki/patrol.mp3',
+      url: 'assets/music2/bajki/patrol.mp3',
       kategoria: 'bajki'
     }
   ];
 
   miejsca = [
     {
-      url: '../../../../assets/music2/miejsca/gory.mp3',
+      url: 'assets/music2/miejsca/gory.mp3',
       kategoria: 'miejsca'
     },
     {
-      url: '../../../../assets/music2/miejsca/morze.mp3',
+      url: 'assets/music2/miejsca/morze.mp3',
       kategoria: 'miejsca'
     },
     {
-      url: '../../../../assets/music2/miejsca/wies.mp3',
+      url: 'assets/music2/miejsca/wies.mp3',
       kategoria: 'miejsca'
     }
   ];
 
   osoby = [
     {
-      url: '../../../../assets/music2/osoby/niemowle.mp3',
+      url: 'assets/music2/osoby/niemowle.mp3',
       kategoria: 'osoby',
     },
     {
-      url: '../../../../assets/music2/osoby/dorosly.mp3',
+      url: 'assets/music2/osoby/dorosly.mp3',
       kategoria: 'osoby',
     },
     {
-      url: '../../../../assets/music2/osoby/starsza.mp3',
+      url: 'assets/music2/osoby/starsza.mp3',
       kategoria: 'osoby',
     },
   ];
 
   polska = [
     {
-      url: '../../../../assets/music2/polska/slask.mp3',
+      url: 'assets/music2/polska/slask.mp3',
       kategoria: 'polska',
     },
     {
-      url: '../../../../assets/music2/polska/wielkopolska.mp3',
+      url: 'assets/music2/polska/wielkopolska.mp3',
       kategoria: 'polska',
     },
     {
-      url: '../../../../assets/music2/polska/podhale.mp3',
+      url: 'assets/music2/polska/podhale.mp3',
       kategoria: 'polska',
     },
     {
-      url: '../../../../assets/music2/polska/mazowsze.mp3',
+      url: 'assets/music2/polska/mazowsze.mp3',
       kategoria: 'polska',
     },
   ];
 
   pory_roku = [
     {
-      url: '../../../../assets/music2/pory_roku/wiosna.mp3',
+      url: 'assets/music2/pory_roku/wiosna.mp3',
       kategoria: 'pory_roku',
     },
     {
-      url: '../../../../assets/music2/pory_roku/lato.mp3',
+      url: 'assets/music2/pory_roku/lato.mp3',
       kategoria: 'pory_roku',
     },
     {
-      url: '../../../../assets/music2/pory_roku/jesien.mp3',
+      url: 'assets/music2/pory_roku/jesien.mp3',
       kategoria: 'pory_roku',
     },
     {
-      url: '../../../../assets/music2/pory_roku/zima.mp3',
+      url: 'assets/music2/pory_roku/zima.mp3',
       kategoria: 'pory_roku',
     },
   ];
+
+  pory_dnia = [
+    {
+      url: 'assets/music2/pory_dnia/grota.mp3',
+      kategoria: 'pory_dnia',
+    },
+    {
+      url: 'assets/music2/pory_dnia/poranek.mp3',
+      kategoria: 'pory_dnia',
+    },
+    {
+      url: 'assets/music2/pory_dnia/taniec_air.mp3',
+      kategoria: 'pory_dnia',
+    },
+    {
+      url: 'assets/music2/pory_dnia/taniec_arabski.mp3',
+      kategoria: 'pory_dnia',
+    },
+  ];
+
+  taniec = [
+    {
+      url: 'assets/music2/taniec/kujawiak.mp3',
+      kategoria: 'taniec',
+    },
+    {
+      url: 'assets/music2/taniec/mazury.mp3',
+      kategoria: 'taniec',
+    },
+    {
+      url: 'assets/music2/taniec/polka.mp3',
+      kategoria: 'taniec',
+    },
+    {
+      url: 'assets/music2/taniec/polonez.mp3',
+      kategoria: 'taniec',
+    },
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
@@ -117,6 +156,8 @@ export class SecondGameComponent implements OnInit {
       this.osoby,
       this.polska,
       this.pory_roku,
+      this.pory_dnia,
+      this.taniec
     ];
   
 
@@ -158,7 +199,7 @@ export class SecondGameComponent implements OnInit {
       this.showCorrectMessage = true;
       setTimeout(() => {
         this.showCorrectMessage = false;
-        if(this.answerCounter > 0) {
+        if(this.answerCounter > 3) {
           this.endGame = true;
   
           return;

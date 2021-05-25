@@ -1,5 +1,5 @@
 {
-  "name": "music-memory",
+  "name": "muzycznyGPS",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod --base-href git@github.com:GabrieIaTencza/muzycznyGPS.git && angular-cli-ghpages --branch develop"
+    "deploy": "ng build --prod --base-href git@github.com:GabrieIaTencza/muzycznyGPS.git && angular-cli-ghpages --branch ficzer"
   },
   "private": true,
   "dependencies": {

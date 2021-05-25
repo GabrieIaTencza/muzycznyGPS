@@ -1,6 +1,19 @@
-<mat-toolbar color="primary">
-    <app-theme-switcher style="position: absolute; right: 0"></app-theme-switcher>
-    <button mat-icon-button [matMenuTriggerFor]="menu" >
+<mat-toolbar color="primary" style="height: 100px;">
+  <!-- <button style="position: absolute; right: 0; font-size: 30px; margin-right: 100px; cursor: pointer" (click)="changeColors()" mat-icon-button>
+    <mat-icon>palette</mat-icon>
+  </button> -->
+  <mat-icon class="material-icons"style="position: absolute; right: 0; font-size: 30px; margin-right: 50px; cursor: pointer" (click)="changeSize1()">
+    zoom_in
+  </mat-icon>
+
+  <mat-icon class="material-icons"style="position: absolute; right: 0; font-size: 30px; margin-right: 20px; cursor: pointer" (click)="changeSize2()">
+    zoom_out
+  </mat-icon>
+
+  
+
+
+    <button mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon style="font-size: 40px;">menu</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
@@ -10,21 +23,31 @@
       </button>
       <button mat-menu-item [routerLink]="'/memory-game'">
         <mat-icon>memory</mat-icon>
-        <span>Gra w zapamiętywanie</span>
+        <span>Muzyczne memory</span>
       </button>
       <button mat-menu-item [routerLink]="'/game'">
         <mat-icon>extension</mat-icon>
-        <span>Gra w odgadywanie</span>
+        <span>Muzykoterapeutyczne zgadnij kto to, co to?</span>
       </button>
       <button mat-menu-item [routerLink]="'/parent-page'">
         <mat-icon>escalator_warning</mat-icon>
-        <span>Panel rodzica</span>
+        <span>Panel dla rodzica</span>
       </button>
       <button mat-menu-item [routerLink]="'/about-me'">
         <mat-icon>send</mat-icon>
         <span>Twórcy</span>
       </button>
+      <button mat-menu-item [routerLink]="'/curiosities'">
+        <mat-icon><span class="material-icons">
+          travel_explore
+          </span></mat-icon>
+        <span>Ciekawostki</span>
+      </button>
     </mat-menu>
+    <div style="display: flex; flex-direction: column;">
+      <span style="margin-left: 20px">Muzyczny GPS</span>
+    <div class="logo"></div>
+  </div>
+
   
-    <span style="margin-left: 20px">Muzyczny GPS</span>
   </mat-toolbar>

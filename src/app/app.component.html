@@ -1,6 +1,6 @@
 <router-outlet></router-outlet>
 
-<app-navigation-bar></app-navigation-bar>
+<app-navigation-bar (change)="test()"></app-navigation-bar>
 
 
 <div *ngIf="!st" style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column;">
