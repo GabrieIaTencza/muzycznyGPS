@@ -23,6 +23,7 @@ import { CreatorComponent } from './components/creator/creator.component';
 import { SecondGameComponent } from './components/second-game/second-game.component';
 import { CiekawostkiComponent } from './components/ciekawostki/ciekawostki.component';
 import { PrawaComponent } from './components/prawa/prawa.component';
+import { GryComponent } from './gry/gry.component';
 
 const routes: Routes = [
   { path: 'memory-game', component: AppComponent },
@@ -31,7 +32,9 @@ const routes: Routes = [
   { path: 'about-me', component: CreatorComponent},
   { path: 'game', component: SecondGameComponent},
   { path: 'curiosities', component: CiekawostkiComponent},
-  { path: 'note', component: PrawaComponent}
+  { path: 'note', component: PrawaComponent},
+  { path: 'games-description', component: GryComponent},
+
 ];
 
 @NgModule({
@@ -45,7 +48,8 @@ const routes: Routes = [
     CreatorComponent,
     SecondGameComponent,
     CiekawostkiComponent,
-    PrawaComponent
+    PrawaComponent,
+    GryComponent
   ],
   imports: [
     RouterModule.forRoot(routes),

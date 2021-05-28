@@ -2,12 +2,12 @@
 <div *ngIf="!showCorrectMessage && !showWrongMessage && !endGame" style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
     
     <ng-container *ngIf="!game2Start && !xd">
-    <div style="font-size: 24px; margin-bottom: 20px;"> Kliknij start </div>
+    <div style="font-size: 30px; margin-bottom: 20px; background-color: yellow; padding: 10px; border-radius: 10px"> Kliknij start </div>
     <button mat-raised-button color="primary" (click)="st()"> START </button>
 </ng-container>
 
 <ng-container *ngIf="game2Start && xd">
-  <div style="font-size: 24px; margin-bottom: 20px;"> Wybierz poziom </div>
+  <div style="font-size: 30px; margin-bottom: 20px; background-color: yellow; padding: 10px; border-radius: 10px"> Wybierz poziom </div>
   <div style="display: flex; flex-direction: row;">
     <button mat-raised-button color="primary" (click)="level('easy')" > Poziom łatwy</button>
     <button mat-raised-button color="primary" (click)="level('medium')" style="margin-left: 5px; margin-right: 5px;">Poziom średni</button>
@@ -15,8 +15,8 @@
     </div>
 </ng-container>
 
-  <div *ngIf="game2Start && !xd">
-    <div style="font-size: 30px; margin-left: auto; margin-right: auto; margin-bottom: 30px; width: 100%;"> Odgadnij kategorię utworu</div>
+  <div *ngIf="game2Start && !xd && !sound">
+    <div style="font-size: 30px; margin-left: auto; margin-right: auto; margin-bottom: 30px; width: 100%; background-color: yellow; padding: 10px; border-radius: 10px"> Odgadnij kategorię utworu</div>
    
     <button mat-raised-button color="primary"  [disabled]="sound" class="button3" (click)="answer('pory_roku')"> Pora roku </button>
     <button mat-raised-button color="primary"  [disabled]="sound" class="button3" (click)="answer('miejsca')"> Miejsce </button>
@@ -25,19 +25,22 @@
     <button mat-raised-button color="primary"  [disabled]="sound" class="button3" (click)="answer('polska')"> Region polski </button>
     <button mat-raised-button color="primary"  [disabled]="sound" class="button3" (click)="answer('pory_dnia')"> Pory dnia </button>
     <button mat-raised-button color="primary"  [disabled]="sound" class="button3" (click)="answer('taniec')"> Taniec </button>
-    <div style="cursor: pointer; display: flex; flex-direction: row; margin-top: 20px; font-size: 20px; justify-content: center; align-items: center;" (click)="playAgain()">
+    <div style="cursor: pointer; display: flex; flex-direction: row; margin-top: 20px; font-size: 20px; justify-content: center; align-items: center; background-color: yellow; padding: 10px; border-radius: 10px" (click)="playAgain()">
     <mat-icon>play_circle</mat-icon><div>Odtwórz ponownie</div>
     </div>
+  </div>
+  <div *ngIf="sound" style="font-size: 30px; margin-left: auto; margin-right: auto; margin-bottom: 30px; width: 100%; background-color: yellow; padding: 10px; border-radius: 10px; text-align: center;">
+    Po wysłuchaniu utworu pojawią się odpowiedzi
   </div>
 
  
 
 </div>
 
-  <div *ngIf="showCorrectMessage" style="color: green;width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 30px;"> Brawo! Prawidłowa odpowiedź</div>
+  <div *ngIf="showCorrectMessage" style="color: black;width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 30px; background-color: yellow; padding: 10px; border-radius: 10px"> Brawo! Prawidłowa odpowiedź</div>
  
-  <div *ngIf="showWrongMessage" style="color: red;width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 30px;"> Zła odpowiedź. Spróbuj jeszcze raz</div>
+  <div *ngIf="showWrongMessage" style="color: black;width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 30px; background-color: yellow; padding: 10px; border-radius: 10px"> Zła odpowiedź. Spróbuj jeszcze raz</div>
 
-  <div *ngIf="endGame" style="color: green;width: 100%; height: 100%; flex-direction: column; display: flex; align-items: center; justify-content: center; font-size: 30px;"> Wygrana
-    <div style="font-size: 24px; margin-bottom: 20px; color: white; margin-top: 5px;"> Aby zagrać ponownie kliknij start</div>
+  <div *ngIf="endGame" style="color: black;width: 100%; height: 100%; flex-direction: column; display: flex; align-items: center; justify-content: center; font-size: 30px; background-color: yellow; padding: 10px; border-radius: 10px"> Wygrana
+    <div style="font-size: 24px; margin-bottom: 20px; color: black; margin-top: 5px; background-color: yellow; padding: 10px; border-radius: 10px"> Aby zagrać ponownie kliknij start</div>
     <button mat-raised-button color="primary" (click)="st()"> START </button> </div>

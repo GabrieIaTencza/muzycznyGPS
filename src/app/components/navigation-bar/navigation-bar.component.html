@@ -1,14 +1,14 @@
-<mat-toolbar color="primary" style="height: 100px;">
+<mat-toolbar color="primary" style="height: 100px; background-color: black !important; " role="navigation">
   <!-- <button style="position: absolute; right: 0; font-size: 30px; margin-right: 100px; cursor: pointer" (click)="changeColors()" mat-icon-button>
     <mat-icon>palette</mat-icon>
   </button> -->
-  <mat-icon class="material-icons"style="position: absolute; right: 0; font-size: 30px; margin-right: 50px; cursor: pointer" (click)="changeSize1()">
+  <!-- <mat-icon class="material-icons"style="position: absolute; right: 0; font-size: 30px; margin-right: 50px; cursor: pointer" (click)="changeSize1()">
     zoom_in
   </mat-icon>
 
   <mat-icon class="material-icons"style="position: absolute; right: 0; font-size: 30px; margin-right: 20px; cursor: pointer" (click)="changeSize2()">
     zoom_out
-  </mat-icon>
+  </mat-icon> -->
 
   
 
@@ -49,10 +49,17 @@
           </span></mat-icon>
         <span>Nota prawna</span>
       </button>
+      <button mat-menu-item [routerLink]="'/games-description'">
+        <mat-icon><span class="material-icons">
+          casino
+          </span></mat-icon>
+        <span>Gry</span>
+      </button>
     </mat-menu>
     <div style="display: flex; flex-direction: column;">
       <span style="margin-left: 20px">Muzyczny GPS</span>
       <img  class="front transparent"
+      alt="logo aplikacji"
     src="assets/logo.png" class="logo"
   /> 
   </div>
