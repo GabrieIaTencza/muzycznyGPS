@@ -4,7 +4,7 @@
 
 
 <div *ngIf="!st" style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column;">
-  <div style="background-color: yellow; color: black !important; margin-bottom: 10px; border-radius: 5px; height: 40px; padding: 5px;"><h1> Naciśnij start aby rozpocząć grę</h1></div>
+
 <button mat-raised-button color="primary" (click)="start()" style="width: 300px; height: 40px; padding: 2px; font-size: 30px"> START </button>
 </div>
 <div *ngIf="st && !startGame" style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column">

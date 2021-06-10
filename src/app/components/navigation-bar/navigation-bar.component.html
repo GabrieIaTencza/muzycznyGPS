@@ -9,53 +9,7 @@
   <mat-icon class="material-icons"style="position: absolute; right: 0; font-size: 30px; margin-right: 20px; cursor: pointer" (click)="changeSize2()">
     zoom_out
   </mat-icon> -->
-
-  
-
-
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon style="font-size: 40px;">menu</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item  [routerLink]="''">
-        <mat-icon>home</mat-icon>
-        <span>Strona główna</span>
-      </button>
-      <button mat-menu-item [routerLink]="'/memory-game'">
-        <mat-icon>memory</mat-icon>
-        <span>Muzyczne memory</span>
-      </button>
-      <button mat-menu-item [routerLink]="'/game'">
-        <mat-icon>extension</mat-icon>
-        <span>Muzykoterapeutyczne zgadnij kto to, co to?</span>
-      </button>
-      <button mat-menu-item [routerLink]="'/parent-page'">
-        <mat-icon>escalator_warning</mat-icon>
-        <span>Panel dla rodzica</span>
-      </button>
-      <button mat-menu-item [routerLink]="'/about-me'">
-        <mat-icon>send</mat-icon>
-        <span>Twórcy</span>
-      </button>
-      <button mat-menu-item [routerLink]="'/curiosities'">
-        <mat-icon><span class="material-icons">
-          travel_explore
-          </span></mat-icon>
-        <span>Ciekawostki</span>
-      </button>
-      <button mat-menu-item [routerLink]="'/note'">
-        <mat-icon><span class="material-icons">
-          format_list_numbered
-          </span></mat-icon>
-        <span>Nota prawna</span>
-      </button>
-      <button mat-menu-item [routerLink]="'/games-description'">
-        <mat-icon><span class="material-icons">
-          casino
-          </span></mat-icon>
-        <span>Gry</span>
-      </button>
-    </mat-menu>
+    
     <div style="display: flex; flex-direction: column;">
       <span style="margin-left: 20px">Muzyczny GPS</span>
       <img  class="front transparent"
@@ -63,6 +17,17 @@
     src="assets/logo.png" class="logo"
   /> 
   </div>
+
+  <nav class="nav-container" style="margin-left: 10px;">
+    <button class="block" [routerLink]="''">Strona główna</button>
+    <button class="block" [routerLink]="'/memory-game'">Muzyczne memory</button>
+    <button class="block block2" [routerLink]="'/game'">Muzykoterapeutyczne zgadnij kto to, co to?</button>
+    <button class="block" [routerLink]="'/parent-page'">Panel dla rodzica</button>
+    <button class="block" [routerLink]="'/about-me'" style="width: 120px;">Twórcy</button>
+    <button class="block" [routerLink]="'/curiosities'" style="width: 120px;">Ciekawostki</button>
+    <button class="block" [routerLink]="'/note'">Nota prawna</button>
+    <button class="block" [routerLink]="'/games-description'" style="width: 120px;">Gry</button>
+</nav>
 
   
   </mat-toolbar>
